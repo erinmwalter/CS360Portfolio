@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sms_consent">
+
+    <TextView
+        android:id="@+id/consentTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="SMS Notification Consent"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"/>
+
+    <TextView
+        android:id="@+id/consentText"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/consentTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="40dp"
+        android:text="By clicking yes, you consent to receive SMS text messages when items are low in stock."/>
+
+    <Button
+        android:id="@+id/consentYesButton"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/consentText"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="150dp"
+        android:onClick="onYesButtonClick"
+        android:text="Yes"/>
+
+    <Button
+        android:id="@+id/consentNoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/consentYesButton"
+        android:text="No"
+        android:onClick="onNoButtonClick"
+        android:layout_marginHorizontal="150dp"
+        android:layout_marginTop="10dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

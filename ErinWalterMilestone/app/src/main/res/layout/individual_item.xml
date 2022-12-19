@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="#F3F3F3"
+        android:layout_height="match_parent">
+        <Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="#000000"
+            android:titleTextColor="@color/white"
+            android:title="Inventory App">
+        </Toolbar>
+
+    <TextView
+        android:layout_height="20dp"
+        android:layout_width="60dp"
+        android:clickable="true"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="< Back"
+        android:textColor="#FFFFFF"></TextView>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/toolbar"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:columnCount="1"
+        android:rowCount="6">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="20dp"
+            android:paddingTop="20dp"
+            android:textAppearance="Bold"
+            android:text="Update Item"
+            android:textAlignment="center"
+            />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            app:shape="Circular"
+            app:scaleType="centerCrop"
+            android:paddingHorizontal="150dp"
+            android:paddingBottom="10dp"
+            android:layout_height="100dp"
+            android:paddingTop="20dp"
+            android:src="@drawable/ic_launcher_background"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            tools:layout_editor_absoluteX="1dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            tools:layout_editor_absoluteY="302dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:hint="Item Name" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            tools:layout_editor_absoluteX="1dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            tools:layout_editor_absoluteY="302dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:hint="50"
+                android:inputType="number"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:text="Notify me when stock is low"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="110dp"
+            android:textAppearance="Underlined"
+            android:textSize="15dp">
+
+        </TextView>
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginLeft="165dp"
+            android:text="Update" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginLeft="165dp"
+            android:text="Delete"
+            android:backgroundTint="#FF0000"/>
+
+
+    </GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
